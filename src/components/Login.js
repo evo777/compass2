@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { 
-  Text, 
-  View, 
-  Image, 
-  Dimensions, 
-  StatusBar, 
+import {
+  Text,
+  View,
+  Image,
+  Dimensions,
+  StatusBar,
   TouchableHighlight,
 } from 'react-native';
 
@@ -13,11 +13,11 @@ import { fullPageView } from '../styles/globalStyles';
 const Login = ({ navigator }) => {
 
   // destructuring the styles for easier readability in returned JSX
-  const { 
-    bgImage, 
-    title, 
-    imageContainer, 
-    centeredElements, 
+  const {
+    bgImage,
+    title,
+    imageContainer,
+    centeredElements,
     signInButton,
     basicText,
   } = styles;
@@ -31,6 +31,11 @@ const Login = ({ navigator }) => {
       <TouchableHighlight onPress={() => navigator.push({name: 'Map'})} style={signInButton} underlayColor={'transparent'} >
         <Text style={basicText}>Sign In</Text>
       </TouchableHighlight>
+      <View>
+      <TouchableHighlight>
+        <Text style={basicText}>Sign in with Google</Text>
+      </TouchableHighlight>
+      </View>
     </View>
   )
 };
