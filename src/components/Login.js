@@ -31,12 +31,10 @@ const Login = ({ navigator }) => {
       <TouchableHighlight onPress={() => navigator.push({name: 'Map'})} style={signInButton} underlayColor={'transparent'} >
         <Text style={basicText}>Sign In</Text>
       </TouchableHighlight>
-      <View>
       <TouchableHighlight>
         <Text style={basicText}>Sign in with Google</Text>
       </TouchableHighlight>
       </View>
-    </View>
   )
 };
 
