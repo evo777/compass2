@@ -22,7 +22,7 @@ const ChatListItem = ({ navigator, userName, lastMessage }) => {
   } = styles;
 
   return (
-    <TouchableHighlight onPress={() => navigator.push({name: 'Map'})} underlayColor={colors.extraLightGrey} >
+    <TouchableHighlight onPress={() => navigator.push({name: 'Chat'})} underlayColor={colors.extraLightGrey} >
       <View style={container}>
         <View style={circle}>
           <Text style={bigLetter}>{userName[0]}</Text>
@@ -38,7 +38,7 @@ const ChatListItem = ({ navigator, userName, lastMessage }) => {
 
 const styles = {
   container: {
-    width: Dimensions.get('window').width,
+    width: Dimensions.get('window').width -20,
     height: 80,
     backgroundColor: 'white',
 
@@ -48,7 +48,6 @@ const styles = {
     borderBottomWidth: 0.5,
     borderBottomColor: colors.extraLightGrey,
 
-    paddingLeft: 20,
   },
 
   name: {

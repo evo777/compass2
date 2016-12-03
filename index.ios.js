@@ -13,6 +13,8 @@ import Login from './src/components/Login';
 import Map from './src/components/Map';
 import BottomNavBar from './src/components/BottomNavBar';
 import ChatList from './src/components/ChatList';
+import Chat from './src/components/Chat';
+import UserProfile from './src/components/UserProfile';
 import colors from './src/styles/colors';
 
 
@@ -36,9 +38,16 @@ class compass2 extends Component {
           <ChatList navigator={navigator} />
           <BottomNavBar viewLabel={'Chat'} navigator={navigator} /> 
         </View>
-        )
+      )
     } else if (name === 'Chat') {
+      return <Chat navigator={navigator} />
     } else if (name === 'UserProfile') {
+      return (
+        <View> 
+          <UserProfile navigator={navigator} />
+          <BottomNavBar viewLabel={'User'} navigator={navigator} /> 
+        </View>
+      )
     }
   }
 
